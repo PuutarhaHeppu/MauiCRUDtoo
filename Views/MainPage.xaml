@@ -3,12 +3,4 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiCRUDtoo.MainPage">
 
-    <Grid>
-        <Button x:Name="nupp"
-                Text="go next"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Clicked="OnCounterClicked"/>
-    </Grid>
-
 </ContentPage>
