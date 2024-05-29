@@ -4,7 +4,7 @@
              x:Class="MauiCRUDtoo.MainPage">
 
     <FlexLayout Direction="Column">
-        <VerticalStackLayout Padding="10" FlexLayout. Basis="400" BackgroundColor="Beige">
+        <VerticalStackLayout Padding="10" FlexLayout.Basis="400" BackgroundColor="Beige">
             <Entry x:Name="nameEntryField" Placeholder="Name" />
             <Entry x:Name="emailEntryField" Placeholder="Email" />
             <Entry x:Name="mobileEntryField" Placeholder="Mobile" />
@@ -24,12 +24,13 @@
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
                                 <Label Grid.Column="0" Text="{Binding Email}" />
-                                <Label Grid.Column="2" Text="{Binding Mobile}" FontAttributes="Bold" /> /Grid>
+                                <Label Grid.Column="2" Text="{Binding Mobile}" FontAttributes="Bold" />
+                            </Grid>
                         </VerticalStackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        /FlexLayout>
+    </FlexLayout>
 
 </ContentPage>
