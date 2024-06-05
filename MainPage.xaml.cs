@@ -27,8 +27,6 @@ namespace MauiCRUDtoo
             }
             else
             {
-                // Edit Customer
-
                 await _dbService.Update(new Customer
                 {
                     Id = _editCustomerId,
@@ -47,9 +45,27 @@ namespace MauiCRUDtoo
             listView.ItemsSource = await _dbService.GetCustomers();
         }
 
-        private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
+            var customer = (Customer)e.Item;
+            var action = await DisplayActionSheet("Action", "Cancel", null, "Edit", "Delete");
 
+            switch (action)
+            {
+                case "Edit":
+
+                    _editCustomerId = customer.Id;
+                    nameEntryField.Text = customer.CustomerName;
+                    emailEntryField.Text = customer.Email;
+                    mobileEntryField.Text = customer.Mobile;
+
+                    break;
+                case "Delete":
+
+                    await _dbService.Delete(customer);
+                    listView.ItemsSource = await _dbService.GetCustomers();
+                    break;
+            }
         }
     }
 

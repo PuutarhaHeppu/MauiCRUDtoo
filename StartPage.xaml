@@ -5,7 +5,7 @@
              Title="StartPage">
 
     <Grid>
-        <Button Clicked="OnCounterClicked"
+        <Button Clicked="OnButtonClicked"
                 Text="Next Page"
                 BackgroundColor="Purple"
                 VerticalOptions="Center"

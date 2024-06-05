@@ -8,7 +8,8 @@ namespace MauiCRUDtoo
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new StartPage());
+            //MainPage = new NavigationPage(new MainPage());
+            MainPage = new AppShell();
         }
     }
 }

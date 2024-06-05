@@ -12,7 +12,7 @@ namespace MauiCRUDtoo
 
         public LocalDbService()
         {
-            _connection = new SQLiteAsyncConnection(Path.Combine(FileSystem.AppDataDirectory, DB_Name));
+            _connection = new SQLiteAsyncConnection(Path.Combine(".", DB_Name));
             _connection.CreateTableAsync<Customer>();
         }
 

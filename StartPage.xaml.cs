@@ -5,11 +5,10 @@ public partial class StartPage : ContentPage
 	public StartPage()
 	{
 		InitializeComponent();
-
 	}
 
-    private async void OnCounterClicked(object sender, EventArgs e)
+    private async void OnButtonClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new MainPage());
+        //await Navigation.PushAsync(new MainPage());
     }
 }
