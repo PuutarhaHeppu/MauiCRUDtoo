@@ -13,32 +13,32 @@ namespace MauiCRUDtoo
         public LocalDbService()
         {
             _connection = new SQLiteAsyncConnection(Path.Combine(".", DB_Name));
-            _connection.CreateTableAsync<Customer>();
+            _connection.CreateTableAsync<Person>();
         }
 
-        public async Task<List<Customer>> GetCustomers()
+        public async Task<List<Person>> GetPersons()
         {
-            return await _connection.Table<Customer>().ToListAsync();
+            return await _connection.Table<Person>().ToListAsync();
         }
 
-        public async Task<Customer> GetById(int id)
+        public async Task<Person> GetById(int id)
         {
-            return await _connection.Table<Customer>().Where(x => x.Id == id).FirstOrDefaultAsync();
+            return await _connection.Table<Person>().Where(x => x.Id == id).FirstOrDefaultAsync();
         }
 
-        public async Task Create(Customer customer)
+        public async Task Create(Person Person)
         {
-            await _connection.InsertAsync(customer);
+            await _connection.InsertAsync(Person);
         }
 
-        public async Task Update(Customer customer)
+        public async Task Update(Person Person)
         {
-            await _connection.UpdateAsync(customer);
+            await _connection.UpdateAsync(Person);
         }
 
-        public async Task Delete(Customer customer)
+        public async Task Delete(Person Person)
         {
-            await _connection.DeleteAsync(customer);
+            await _connection.DeleteAsync(Person);
         }
     }
 }
