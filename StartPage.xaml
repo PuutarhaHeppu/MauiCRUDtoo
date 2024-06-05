@@ -4,13 +4,13 @@
              x:Class="MauiCRUDtoo.Views.StartPage"
              Title="StartPage">
 
-    <Grid>
+    <Grid Background="AliceBlue">
         <Button Clicked="OnButtonClicked"
-                Text="Next Page"
+                Text="CRUD operation's Page"
                 BackgroundColor="Purple"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
-                WidthRequest="100"
+                WidthRequest="180"
                 HeightRequest="50"
                 TranslationY="200"/>
     </Grid>
